@@ -1,6 +1,15 @@
 {
-  "originHash" : "24d477fadebca91c63dcee3bc8412f30da934cce29db82b6d5e5b6acbead0e4f",
+  "originHash" : "20fa541384a5a44312334a085dd8f6502b9810f22388b73fc99054adb0ca61a2",
   "pins" : [
+    {
+      "identity" : "machokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/p-x9/MachOKit.git",
+      "state" : {
+        "revision" : "518e8e1aca7ee64b87b08ecec5f7cad2a63b8efd",
+        "version" : "0.28.0"
+      }
+    },
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
