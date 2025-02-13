@@ -22,7 +22,7 @@ struct inject_o: ParsableCommand {
     @Option(name: .shortAndLong, help: "Path to the dylib to be added")
     var dylib: String
 
-    @Option(name: .shortAndLong, help: "Path to the output Mach-O file (default: <input>.injected))")
+    @Option(name: .shortAndLong, help: "Path to the output Mach-O file (default: <input>.injected)")
     var output: String?
 
     @Flag(name: .shortAndLong, help: "Add as LC_LOAD_WEAK_DYLIB")
