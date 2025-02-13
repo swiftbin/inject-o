@@ -118,13 +118,16 @@ extension inject_o {
             current_version: 0,
             compatibility_version: 0
         )
-        let layout: dylib_command = .init(
+        var layout: dylib_command = .init(
             cmd: cmd,
             cmdsize: numericCast(cmdsize),
             dylib: dylib
         )
 
-        return DylibCommand.data(of: layout) + stringData
+        let padding = (8 - (cmdsize % 8))
+        layout.cmdsize += numericCast(padding)
+
+        return DylibCommand.data(of: layout) + stringData + Data(count: padding)
     }
 
     func stripCodeSignIfNeeded(
